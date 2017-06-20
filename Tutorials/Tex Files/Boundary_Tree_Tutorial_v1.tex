@@ -51,15 +51,6 @@
 	\maketitle
 	\section{An Introduction}
 		This guide aims to be everything you need to implement (and test) the Boundary Tree algorithm. Initially, the assumption is that you have no prior knowledge in machine learning - if this is not the case, sections where you are able to skim over and still understand will be marked as such.\\
-		
-		In the Boundary Tree paper's introduction, the authors' motivations were defined as seeking an algorithm that is:
-			\begin{enumerate}
-				\item Fast to train.
-				\item Fast to query.
-				\item Able to deal with arbitrary data distributions.
-				\item Able to learn incrementally, in an online setting.
-			\end{enumerate}
-		blah blah blacoskjdflkj
 
 	\section{The Real Deal}
 			Let's start by talking about features, and the conventions surrounding datasets. These terms show up quite a bit in the conversation surrounding machine learning, and it always helps to start from the bottom and solidify the foundations.\\
@@ -238,7 +229,8 @@
 						num_correct += 1.0
 						iter_num += 1.0
 						print("Accuracy ( @ Iteration %d): %.5f" % (iter_num, (num_correct/iter_num)*100.0))
-					print("Testing Complete!\nFINAL ACCURACY: %.5f percent correct." % ((num_correct/iter_num)*100.0))\end{lstlisting}
+					print("Testing Complete!\nFINAL ACCURACY: %.5f percent correct." % ((num_correct/iter_num)*100.0))
+\end{lstlisting}
 		
 		I'll add more to this if needed, but I think this gets you up and running. 
 		

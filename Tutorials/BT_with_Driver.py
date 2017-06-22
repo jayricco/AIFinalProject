@@ -1,7 +1,6 @@
 import numpy as np
 import copy
 
-
 class BoundaryTree(object):
     @staticmethod
     def distance(x1, x2):

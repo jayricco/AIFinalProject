@@ -1,0 +1,10 @@
+FINAL ACCURACY: 87.45000 percent correct with 50000 examples. Training: 131.48428 seconds. Testing: 33.04327 seconds.
+FINAL ACCURACY: 87.14000 percent correct with 50000 examples. Training: 118.46636 seconds. Testing: 30.86975 seconds.
+FINAL ACCURACY: 86.86000 percent correct with 50000 examples. Training: 106.74941 seconds. Testing: 28.57356 seconds.
+FINAL ACCURACY: 87.99000 percent correct with 50000 examples. Training: 148.03080 seconds. Testing: 37.61617 seconds.
+FINAL ACCURACY: 87.56000 percent correct with 50000 examples. Training: 676.09708 seconds. Testing: 31.97142 seconds.
+FINAL ACCURACY: 87.86000 percent correct with 50000 examples. Training: 159.59712 seconds. Testing: 41.58748 seconds.
+FINAL ACCURACY: 87.71000 percent correct with 50000 examples. Training: 138.92381 seconds. Testing: 35.89903 seconds.
+FINAL ACCURACY: 87.78000 percent correct with 50000 examples. Training: 137.09152 seconds. Testing: 36.21473 seconds.
+FINAL ACCURACY: 86.80000 percent correct with 50000 examples. Training: 147.69869 seconds. Testing: 37.39973 seconds.
+FINAL ACCURACY: 87.77000 percent correct with 50000 examples. Training: 111.25734 seconds. Testing: 28.47680 seconds.

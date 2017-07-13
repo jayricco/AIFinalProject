@@ -5,6 +5,7 @@
 \usepackage{amssymb}
 \usepackage{makeidx}
 \usepackage{graphicx}
+\usepackage{algorithm2e}
 \usepackage[left=1.00in, right=1.00in, top=1.00in, bottom=1.00in]{geometry}
 \author{Jay Ricco, David Van Chu}
 \title{Introduction to Artificial Intelligence\\Project Update}
@@ -20,6 +21,17 @@
 			\item Calculate standard deviation along with averages.
 			\item Find a way to visualize the datasets during training and testing.
 		\end{enumerate}
+		\subsection{DBT's Setback}
+			Jay's issue was caused by the underlying computation architecture of TensorFlow. The compute graphs compiled by the library are static, while the algorithm requires dynamically building them. Implementation in PyTorch should be far easier and actually accurate. To date, the logical flow behind the implementation is as follows:\\
+			\begin{algorithm}
+				\SetAlgoLined
+				$trainbatch$ = get\_mnist\_training\_batch(BATCH\_SIZE)\\
+				$f_{\theta}$ = initialize\_feedforward\_compute\_graph()\\
+				\For{$\left( tx, ty \right)$ $\in$ trainbatch}{Train Boundary Tree $\mathcal{T}$ using transform $f_{\theta}$}
+				\For{$\left(tx, ty \right)$ $\in$ $\subset$ trainbatch}{Build Network Function $Net_{\theta}$ using 'Torchified' query function.\\
+				Back-propagate error and update $\theta$ using $Net$} 
+			\end{algorithm}
+			
 		\section{Backup Plan}
 		If we decide to focus on the existing Boundary Trees implementation, we will test it with different distance functions to see how they perform on MNIST and CIFAR10. We will also create synthetic data sets to test speed as dataset size increases, without caring how accurate the boundary tree is.
 	

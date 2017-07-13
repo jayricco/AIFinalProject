@@ -52,18 +52,22 @@ if __name__ == "__main__":
     import random
     from mnist import MNIST
 
+    #mnist: different distance functions
+    #different max children
+    #
+    random.seed(4242)
     data = MNIST('./MNIST_data/')
     x_train, y_train = data.load_training()
     num_examples = len(x_train)
-    nums_to_run = [20000, 30000]
-    #num_to_use = 100
+    nums_to_run = [5000, 30000]
     #---------------------------------------------
     for i in range(len(nums_to_run)):
         num_to_use = nums_to_run[i]
-        for i in range(10):
+        for j in range(10):
+            #x_train, y_train = data.load_training()
             selection_list = range(num_examples)
             random.shuffle(selection_list)
-            training_examples = [(x_train[i], y_train[i]) for i in selection_list]
+            training_examples = [(x_train[index], y_train[index]) for index in selection_list]
             root_example = training_examples[random.randint(0, num_examples)]
             boundary_tree = BoundaryTree(k=-1, root_x = root_example[0], root_y = root_example[1])
 
@@ -80,7 +84,7 @@ if __name__ == "__main__":
                 if int(percent_complete) != previous_percent:
                     if percent_complete % 1 == 0 or iter_count == 1:
                         sys.stdout.write("%d percent complete " % int(percent_complete))
-                        for i in range(int(percent_complete/2)):
+                        for k in range(int(percent_complete/2)):
                             sys.stdout.write("|")
                         sys.stdout.write("      \r")
                         sys.stdout.flush()
@@ -97,7 +101,7 @@ if __name__ == "__main__":
             num_examples_test = len(x_test)
             selection_list = range(num_examples_test)
             random.shuffle(selection_list)
-            test_examples = [(x_test[i], y_test[i]) for i in selection_list]
+            test_examples = [(x_test[index], y_test[index]) for index in selection_list]
             num_correct = 0.0
             iter_num = 0.0
             print("Running Monte Carlo Accuracy Test...")

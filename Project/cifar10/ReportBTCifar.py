@@ -50,25 +50,27 @@ class BoundaryTree(object):
 
 if __name__ == "__main__":
     import random
-    from pydatset.cifar10 import get_CIFAR10_data
+    import cifar10
+    import matplotlib.pyplot as plt
+    from matplotlib import animation
+    from scipy.misc import toimage
 
-    data = get_CIFAR10_data('./cifar_data/', num_training=49000, num_validation=1000, num_test=1000)
-    data = {
-        'X_train': data['X_train'],
-        'y_train': data['y_train'],
-        'X_val': data['X_test'],
-        'y_val': data['y_test'],
-    }
-    num_examples = len(data)
-    nums_to_run = [20000, 30000]
-    #num_to_use = 100
+    fig_size = plt.rcParams["figure.figsize"]
+    fig_size[0] /= 4
+    fig_size[1] /= 4
+    plt.rcParams["figure.figsize"] = fig_size
+
+    data = cifar10.load_training_data()
+    nums_to_run = [1, 10, 100, 1000, 5000, 10000, 20000, 30000, 40000, 50000]
     #---------------------------------------------
     for i in range(len(nums_to_run)):
         num_to_use = nums_to_run[i]
-        for i in range(10):
+        for j in range(10):
+            images, classes, onehot = data
+            num_examples = len(images)
             selection_list = range(num_examples)
             random.shuffle(selection_list)
-            training_examples = [(x_train[i], y_train[i]) for i in selection_list]
+            training_examples = [(images[index], classes[index]) for index in selection_list]
             root_example = training_examples[random.randint(0, num_examples)]
             boundary_tree = BoundaryTree(k=-1, root_x = root_example[0], root_y = root_example[1])
 
@@ -80,6 +82,9 @@ if __name__ == "__main__":
 
             previous_percent = -1
             for (ex_feats, true_class) in training_examples:
+                plt.imshow(toimage(ex_feats))
+                plt.show()
+
                 boundary_tree.train(ex_feats, true_class)
                 percent_complete = round((iter_count/float(num_examples)*100.0), 1)
                 if int(percent_complete) != previous_percent:
@@ -98,11 +103,11 @@ if __name__ == "__main__":
             end_time_train = time.time() - start_time_train
             print("--- %s seconds ---" % (end_time_train))
 
-            x_test, y_test = data.load_testing()
-            num_examples_test = len(x_test)
-            selection_list = range(num_examples_test)
-            random.shuffle(selection_list)
-            test_examples = [(x_test[i], y_test[i]) for i in selection_list]
+            images, classes, onehottest = cifar10.load_test_data()
+            num_examples_test = len(images)
+            selection_list_test = range(num_examples_test)
+            random.shuffle(selection_list_test)
+            test_examples = [(images[index], classes[index]) for index in selection_list_test]
             num_correct = 0.0
             iter_num = 0.0
             print("Running Monte Carlo Accuracy Test...")

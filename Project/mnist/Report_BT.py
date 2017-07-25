@@ -60,7 +60,7 @@ if __name__ == "__main__":
     x_train, y_train = data.load_training()
     num_examples = len(x_train)
     nums_to_run = [1, 10, 100, 1000, 10000, 20000, 30000, 40000, 50000, 60000]
-    branching_factor = 3
+    branching_factor = 20
     #---------------------------------------------
     with open('MNIST_data_' + str(branching_factor) + '.csv', 'wb') as csvfile:
         writer = csv.writer(csvfile, delimiter=',')
@@ -69,10 +69,11 @@ if __name__ == "__main__":
             num_to_use = nums_to_run[i]
             for j in range(10):
                 x_train, y_train = data.load_training()
+                num_examples = len(x_train)
                 selection_list = range(num_examples)
                 random.shuffle(selection_list)
                 training_examples = [(x_train[index], y_train[index]) for index in selection_list]
-                root_example = training_examples[random.randint(0, num_examples)]
+                root_example = training_examples[random.randint(0, num_examples - 1)]
                 #boundary_tree = BoundaryTree(k=-1, root_x = root_example[0], root_y = root_example[1])
                 boundary_tree = BoundaryTree(k=branching_factor, root_x = root_example[0], root_y = root_example[1])
                 iter_count = 1

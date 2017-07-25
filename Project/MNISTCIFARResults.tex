@@ -1,0 +1,32 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{algorithm2e}
+\usepackage[left=1.00in, right=1.00in, top=1.00in, bottom=1.00in]{geometry}
+\author{Jay Ricco, David Van Chu}
+\title{Introduction to Artificial Intelligence\\MNIST and CIFAR10 with Boundary Trees}
+\begin{document}
+	\maketitle
+	\section{MNIST}
+		Changing the maximum branching factor, k, played a large role in both accuracy as well as the speed of training and querying. As k grows, it takes longer to train and query, although the accuracy is higher, so it may be worth it depending on the use case.
+		For example:
+		\begin{enumerate}
+			\item k = $\infty$
+			\item accuracy = 88.2$\%$
+			\item training = 156.22 seconds
+			\item testing = 33.97 seconds
+		\end{enumerate}
+	
+		\begin{enumerate}
+			\item k = $\infty$
+			\item accuracy = 85$\%$
+			\item training = 72.21 seconds
+			\item testing = 14.34 seconds
+		\end{enumerate}
+	\section{CIFAR10}
+		
+\end{document}

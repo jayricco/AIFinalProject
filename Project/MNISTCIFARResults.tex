@@ -12,21 +12,46 @@
 \begin{document}
 	\maketitle
 	\section{MNIST}
-		Changing the maximum branching factor, k, played a large role in both accuracy as well as the speed of training and querying. As k grows, it takes longer to train and query, although the accuracy is higher, so it may be worth it depending on the use case.
+		\hspace{5mm}Changing the maximum branching factor, k, played a large role in both accuracy as well as the speed of training and querying. As the branching factor grows, it takes longer to train and query, although the accuracy is higher, so it may be worth it depending on the use case.
 		For example:
-		\begin{enumerate}
-			\item k = $\infty$
-			\item accuracy = 88.2$\%$
-			\item training = 156.22 seconds
-			\item testing = 33.97 seconds
-		\end{enumerate}
-	
-		\begin{enumerate}
-			\item k = $\infty$
-			\item accuracy = 85$\%$
-			\item training = 72.21 seconds
-			\item testing = 14.34 seconds
-		\end{enumerate}
+			
+		\begin{enumerate}	
+			\item with branching factor = $\infty$, averaged over 10 runs
+				\begin{itemize}
+					\item accuracy = 88$\%$
+					\item training = 167.48 seconds
+					\item testing = 36.10 seconds
+				\end{itemize}
+	 		\item with branching factor = 5, averaged over 10 runs
+				\begin{itemize}
+					\item accuracy = 85$\%$
+					\item training = 72.54 seconds
+					\item testing = 14.19 seconds
+				\end{itemize}
+			\end{enumerate}
+		
+		After running the tests, I noticed that setting the branching factor to 5-10 seemed to be the best if both time and accuracy is a concern, as anything less than 5 will result in lower accuracy while taking about the same amount of time to train and test.
+		
+		Another interesting point is that with a larger branching factor, the training time varies by quite a bit, ranging from 140.47 seconds to 223.79 seconds, whereas tests ran with a lower branching factor resulted in consistent training times.
+		
+		While accuracy and testing time plateaued, the time it took to train grew linearly with more examples.
+		
 	\section{CIFAR10}
+	\hspace{5mm}We see similar results when using Boundary Trees on the CIFAR10 dataset, although it never achieves over 27.6$\%$ accuracy. Using a smaller branching factor quickens the training time significantly compared to the MNIST dataset results.
+	
+	\begin{enumerate}	
+		\item with branching factor = $\infty$, averaged over 10 runs
+		\begin{itemize}
+			\item accuracy = 27.3$\%$
+			\item training = 125.91 seconds
+			\item testing = 52.22 seconds
+		\end{itemize}
+		\item with branching factor = 5, averaged over 10 runs
+		\begin{itemize}
+			\item accuracy = 26.5$\%$
+			\item training = 32.36 seconds
+			\item testing = 10.46 seconds
+		\end{itemize}
+	\end{enumerate}
 		
 \end{document}

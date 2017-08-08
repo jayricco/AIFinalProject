@@ -1,7 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8d4c412-0e31-4053-a1e7-e19f8ebd8d0f" name="Default" comment="" />
+    <list default="true" id="d8d4c412-0e31-4053-a1e7-e19f8ebd8d0f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/AI_Final_Project_Paper.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/cifar-10-batches-py/batches.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/cifar-10-batches-py/data_batch_2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/cifar-10-batches-py/data_batch_3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/cifar-10-batches-py/data_batch_4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/cifar-10-batches-py/data_batch_5" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/cifar-10-batches-py/test_batch" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results/CIFAR10_data_-1.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results/CIFAR10_data_5.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results/cifar_data_avg.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/MNIST_Data/t10k-images-idx3-ubyte" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/MNIST_Data/t10k-labels-idx1-ubyte" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/MNIST_Data/train-images-idx3-ubyte" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/MNIST_Data/train-labels-idx1-ubyte" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results/MNIST_data_-1.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results/MNIST_data_5.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results/MNST_data_avg.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/MNISTCIFARResults.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/MNISTCIFARResults.synctex.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/aipresentation.pptx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results/CIFAR10_data_-1.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results/CIFAR10_data_5.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results/cifar_data_avg.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10_varying_k.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10k5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10kinfinity.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist-varying-k.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results/MNIST_data_-1.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results/MNIST_data_5.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results/MNST_data_avg.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist_varying_k.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnistk5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnistkinfinity.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/ReportBTCifar.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/cache.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/cifar-10-batches-py/data_batch_1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/cifar-10-batches-py/readme.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/cifar10.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/dataset.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results-1.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results-10.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results-100.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results-1000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results-10000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results-20000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results-30000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results-40000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results-5000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results-50000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results/CIFAR10_data_-1.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results/CIFAR10_data_10.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results/CIFAR10_data_100.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results/CIFAR10_data_2.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results/CIFAR10_data_20.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results/CIFAR10_data_3.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results/CIFAR10_data_5.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/cifar10/results/CIFAR10_data_50.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/Report_BT.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results-1.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results-10.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results-100.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results-1000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results-10000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results-20000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results-30000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results-40000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results-50000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results-60000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results/MNIST_data_-1.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results/MNIST_data_10.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results/MNIST_data_100.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results/MNIST_data_2.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results/MNIST_data_20.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results/MNIST_data_3.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results/MNIST_data_5.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Deliverables/Boundary Trees/mnist/results/MNIST_data_50.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/MNISTCIFARResults.aux" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/MNISTCIFARResults.tex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results-1.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results-10.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results-100.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results-1000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results-10000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results-20000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results-30000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results-40000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results-5000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results-50000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results/CIFAR10_data_-1.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results/CIFAR10_data_10.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results/CIFAR10_data_100.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results/CIFAR10_data_2.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results/CIFAR10_data_20.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results/CIFAR10_data_3.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results/CIFAR10_data_5.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/cifar10/results/CIFAR10_data_50.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/k=-1/results-1.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/k=-1/results-10.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/k=-1/results-100.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/k=-1/results-1000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/k=-1/results-10000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/k=-1/results-20000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/k=-1/results-30000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/k=-1/results-40000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/k=-1/results-50000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/k=-1/results-60000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results-1.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results-10.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results-100.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results-1000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results-10000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results-20000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results-30000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results-40000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results-50000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results-60000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results/MNIST_data_-1.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results/MNIST_data_10.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results/MNIST_data_100.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results/MNIST_data_2.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results/MNIST_data_20.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results/MNIST_data_3.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results/MNIST_data_5.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Project/mnist/results/MNIST_data_50.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Project/cifar10/ReportBTCifar.py" afterPath="$PROJECT_DIR$/../../Project/cifar10/ReportBTCifar.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Project/mnist/Report_BT.py" afterPath="$PROJECT_DIR$/../../Project/mnist/Report_BT.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,20 +233,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Datasets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>

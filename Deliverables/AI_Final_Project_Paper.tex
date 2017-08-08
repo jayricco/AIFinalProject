@@ -1,0 +1,87 @@
+\documentclass[10pt,letterpaper,twocolumn]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{sectsty}
+\usepackage[left=1.00in, right=1.00in, top=1.00in, bottom=1.00in]{geometry}
+\author{Jay Ricco, David Van Chu}
+\title{Boundary Trees \& Differential Boundary Trees}
+\date{Due: August 8, 2017}
+
+\sectionfont{\fontsize{14}{15}\selectfont}
+\subsectionfont{\fontsize{12}{15}\selectfont}
+\begin{document}
+	\maketitle
+	\section{Introduction}
+		The overall goal of this project was to understand and further study the function, effectiveness and efficiency of the Boundary Tree and Differentiable Boundary Tree algorithms. 
+	\section{Background Knowledge}
+		
+		\subsection{The Boundary Tree Algorithm}
+		Boundary Trees were introduced in the paper, \textit{The Boundary Forest Algorithm for Online Supervised and Unsupervised Learning }{\footnotesize (Mathy, Derbinsky, et.al. 2015)}, as an instance-based learning algorithm which has the properties of being (i) fast to train, (ii) fast to query, and (iii) able to incrementally learn complex data distributions in an on-line setting.\\
+		
+		
+
+	\section{Differentiable Boundary Trees}
+		\subsection{Introduction}
+			The Differentiable Boundary Tree algorithm seeks to solve a simple problem: reducing the inadequacies imparted by a poor choice in distance function; coupled with the derived issues of improper features and high feature dimensionality. Most modern machine learning methods have the ability to use easily obtainable, but technically poor, raw features and then learn to transform and distort them in such a way as to produce an output that is useful. Classical Boundary Trees lack this property, or in other words - will require massive numbers of stored nodes in order to classify examples from  distributions with complex, non-linear decision boundaries.
+		\subsection{The Model}
+			DBT's build on Boundary Trees in that they apply essentially the same algorithm, except now there is something of a transformational encoder prior to the input, and transitions in the tree are modeled probabilistically (and thus, continuously), instead of movements between discrete objects. This allows the tree to be reduced, essentially, to a probability distribution whose density function represents the expected class returned, with respect to some query example's encoded feature vector.\\
+			To do this, at every neighborhood until we reach the closest node in the tree, a transition distribution is formed by applying the softmax function to the negative distances between every member of the local neighborhood and the query's feature vector. This produces higher probabilities if two distinct nodes are closer in the transformed space, and lower probabilities if they are farther apart. The maximum of that distribution is the next node we transition to, and those probabilities are summed over all but the last transition. When the final neighborhood is reached, the class distribution is determined by the expected class of that neighborhood, conditioned on the path probability that has been greedily generated during the algorithm's descent.\\
+			At this point, applying that expectation to a loss function, we can optimize the encoder's parameters with the goal of producing class probabilities that are as-close-as possible to the example's one-hot encoded class (which is really just a perfect target probability distribution). This has the effect of not only teaching the transform to maximize the distances between classes, but it also minimizes the tree's depth by requiring fewer examples to bridge incorrectly classified gaps in the learned feature space's decision boundary. 
+			
+		\subsection{Testing}
+			For all tests, the number of nodes, training time, back-propagation time, and loss were recorded for every batch iteration until convergence (or manual stop). 
+			\subsubsection{Half Moon}
+			The first test performed on the DBT algorithm was using the Half Moon dataset. \\
+			The data is randomly generated and takes the form of two dimensional class manifolds which interlock in a non-linear fashion. The goal of this test is to prove that non-linear learning is occurring - if the manifolds can be manipulated in such a way as to make them linearly separable, then the algorithm works. 
+			\subsubsection{digits}
+			The digits dataset is a smaller, less complex 'version' of MNIST. This dataset was used to produce the graphic showing the clustering of the transformed input as training continues. This dataset caused no issues, converging in only a few minutes after ~ 700 iterations. In the future, more testing needs to be done regarding profiling - there just wasn't enough time with regard to this project. 
+			
+			\subsubsection{MNIST}
+			The algorithm did not handle MNIST well. The full dataset took 30 hours to reach convergence with a minimum storage requirement of 16 nodes out of 1000 training examples. This is good with respect to the result, but the training took far too long to be reasonable and often, depending on the order that examples are shown to the tree, convergence may not be reached all together. 
+		\subsection{Issues \& Challenges}
+			\subsubsection{Dynamic Graph Computation}
+				The first significant set-back originated from the computation libraries back-end. An initial implementation was designed and built in TensorFlow; however this library only supports computation on static graphs. In order to be able to dynamically generate the computation graph required for calculating probabilities down the tree, PyTorch was the library required for implementation. Switching libraries added about 3 weeks of work (learning curve and all), which was a costly and frustrating mistake. 
+			\subsection{Testing Time \& Convergence}
+				With no code samples and little direct implementation information in the original paper, much of the implementation's structure was guessed and assumed; this is an obvious source for error between data given by the author's and data collected/ observations made by further experimentation. Still, despite that - the algorithm's convergence was very dependent on the structure of the transformation, the activation function, the loss function, the optimizer, and the range of the input data. As well, training on large data sets (like MNIST) bore extremely long waiting times which slowed down progress tremendously. It's hard, if not impossible to clearly and faithfully visualize the learning's progress for any dimensionality greater than 3, and the time it takes for the loss to show noticeable signs of convergence is not short enough.
+	
+\appendix
+	\section{Source Code Listings}
+	The Github for this project, which holds a track record of all the work done can be found at:
+	https://github.com/jayricco/AIFinalProject
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline 
+		\rule[-1ex]{0pt}{2.5ex} \textbf{FileName} & \textbf{Description} \\ 
+		\hline 
+		\rule[-1ex]{0pt}{2.5ex} DifferentiableBoundaryTrees.py&  Main Testing Implementation\\ 
+		\hline 
+		\rule[-1ex]{0pt}{2.5ex} MNIST.py &  MNIST Dataset handler\\ 
+		\hline 
+		\rule[-1ex]{0pt}{2.5ex} main.py &  Main Driver\\ 
+		\hline 
+		\rule[-1ex]{0pt}{2.5ex} DifferentiableBoundaryTrees\_VDigits.py &  Gif Producing Implementation\\ 
+		\hline 
+		\rule[-1ex]{0pt}{2.5ex} DifferentiableBoundaryTrees\_VHalfMoon.py&  Gif Producing Implementation\\ 
+	\end{tabular}
+	\section{Data Set Listings}
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline 
+		\rule[-1ex]{0pt}{2.5ex} \textbf{Data Set} & \textbf{Source} \\ 
+		\hline 
+		\rule[-1ex]{0pt}{2.5ex} MNIST &  \texttt{torchvision.datasets}\\ 
+		\hline 
+		\rule[-1ex]{0pt}{2.5ex} CIFAR-10 &  \texttt{torchvision.datasets}\\ 
+		\hline 
+		\rule[-1ex]{0pt}{2.5ex} digits &  \texttt{sklearn}\\ 
+		\hline 
+		\rule[-1ex]{0pt}{2.5ex} Half Moon &  \texttt{sklearn}\\ 
+		\hline 
+		\rule[-1ex]{0pt}{2.5ex} Ground Truth &  \texttt{Generated}\\ 
+		\hline 
+	\end{tabular} 
+\end{document}
